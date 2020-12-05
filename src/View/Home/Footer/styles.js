@@ -16,7 +16,9 @@ export default Styled.div`
         z-index: -1;
     }
     h1.title {
-        width: 80%;
+        ${({theme}) => theme.minQuery("md")} {
+            width: 80%;
+        }
     }
     ol.nav {
         padding: 0px;
@@ -26,8 +28,15 @@ export default Styled.div`
         border-bottom: 2px solid #222222;
         li {
             display: inline-block;
-            &:not(:last-child) {
-                margin-right: 3em;
+            ${({theme}) => theme.maxQuery("md")} {
+                display: block;
+                margin-bottom: 2em;
+                font-weight: bold;
+            }
+            ${({theme}) => theme.minQuery("md")} {
+                &:not(:last-child) {
+                    margin-right: 3em;
+                }
             }
         }
     }

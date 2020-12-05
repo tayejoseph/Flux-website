@@ -13,6 +13,7 @@ export default Styled.nav`
             img {
                 width: 32px;
                 height: 32px;
+                margin: 0px;
             }
             &:before {
                 content: "";
@@ -23,7 +24,7 @@ export default Styled.nav`
                 left: -100vw;
                 z-index: -1;
             }
-        ${({theme}) => theme.minQuery("md")} {
+        ${({theme}) => theme.minQuery("1050px")} {
             display: none;
         }
     }
@@ -34,16 +35,17 @@ export default Styled.nav`
         align-items: center;
         z-index: 999;
         position: relative;
-        ${({theme}) => theme.maxQuery("md")} {
+        ${({theme}) => theme.maxQuery("1050px")} {
             display: none;
         }
         justify-content: space-between;
         ol {
             list-style: none;
             margin: 0px;
+            font-size: 17px;
+            font-weight: bold;
             li {
                 display: inline-block;
-                font-size: 14px;
                 &:not(:last-child) {
                     margin-right: 3em;
                 }

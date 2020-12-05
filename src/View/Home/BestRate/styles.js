@@ -8,7 +8,9 @@ export default Styled.div`
     padding-top: 3em;
     height: 671px;
      > div {
-        width: 50%;
+        ${({theme}) => theme.minQuery("lg")} {
+            width: 50%;
+        }
         margin: 0 auto;
     }
     &:before {

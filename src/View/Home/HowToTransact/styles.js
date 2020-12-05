@@ -8,7 +8,6 @@ export default Styled.div`
         margin: 0px auto;
         padding: 0px;
         margin-bottom: 3em;
-        /* padding: 0px 1.2em; */
         border-bottom: 2px solid #D4D4D4;
         width: fit-content;
         li {
@@ -16,6 +15,11 @@ export default Styled.div`
             position: relative;
             padding: 0px 1em 1em;
             color: #D4D4D4;
+            ${({theme}) => theme.maxQuery("md")} {
+                width: 40%;
+                padding: 0px 0.5em 1em;
+
+            }
         }
         li.active {
             color: #855AAF;
@@ -46,23 +50,38 @@ export default Styled.div`
     div.row {
         display: flex;
         justify-content: space-between;
+        ${({theme}) => theme.maxQuery("md")} {
+            flex-direction: column;
+        }
         .col {
-            width: 25%;
-            height: 780px;
             position: relative;
+            width: 25%;
+            ${({theme}) => theme.maxQuery("md")} {
+                width: 100%;
+                margin-bottom: 3em;
+            }
+            ${({theme}) => theme.minQuery("md")} {
+                height: 780px;
+            }
             p {
                 margin: 0px;
             }
             img {
-                position: absolute;
-                margin: 0px;
-                left: -20px;
-                top: 120px;
+                ${({theme}) => theme.minQuery("md")} {
+                    position: absolute;
+                    margin: 0px;
+                    left: -20px;
+                    top: 6em;
+                }
             }
             img:nth-child(2) {
-                top: 310px;
-                left: 50px;
                 position: absolute;
+                left: 20%;
+                top: 310px;
+                ${({theme}) => theme.minQuery("md")} {
+                    top: 310px;
+                    left: 50px;
+                }
             }
         }
     }

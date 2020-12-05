@@ -10,7 +10,7 @@ const ReceiveMoney = () => {
             <div className = "row">
                 <div className = "col">
                     <h3 className = "semi-header">SENDING</h3>
-                    <h1 className = "title">Send money with ease.</h1>
+                    <h1 className = "headline">Send money with ease.</h1>
                     <p>Instantly send money anywhere on flux using Bitcoin or USDT.</p>
                     <a href = "/" className = "link--arrow">See how <BiRightArrowAlt /></a>
                 </div>

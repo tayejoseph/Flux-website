@@ -1,25 +1,43 @@
 import Styled from "styled-components"
 
 export default Styled.div`
-position: relative;
-div.imgs-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3em 0px;
-    position: absolute;
-    img {
-        display: block;
+    position: relative;
+    div.imgs-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3em 0px;
+        position: absolute;
+        ${({theme}) => theme.maxQuery("md")} {
+            display: grid;
+            grid-row-gap: 2em;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr;
+        }
+        img {
+            display: block;
+            ${({theme}) => theme.maxQuery("md")} {
+                width: 124px;
+                height: 27px;
+            }
+        }
     }
-}
     div.row {
-        height: 120vh;
+        ${({theme}) => theme.minQuery("lg")} {
+            height: 120vh;
+        }
         align-items: center;
         display: flex;
         div.col {
-            width: 50%;
+            ${({theme}) => theme.minQuery("lg")} {
+                width: 50%;
+            }
             &:first-child {
+                display: none;
+                ${({theme}) => theme.minQuery("lg")} {
+                    display: block;
+                }
                 &:before {
                     content: "";
                     display: block;

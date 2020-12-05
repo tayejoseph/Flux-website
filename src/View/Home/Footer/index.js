@@ -13,10 +13,10 @@ const Footer = () => {
                 <Button secondary>Contact Us</Button>
             </div>
             <ol className = "nav">
-                <li>About Us</li>
-                <li>Flux Store</li>
-                <li>FAQs</li>
-                <li>Contact Us</li>
+                <li className = "small--body">About Us</li>
+                <li className = "small--body">Flux Store</li>
+                <li className = "small--body">FAQs</li>
+                <li className = "small--body">Contact Us</li>
             </ol>
             <div className = "row">
                 <p className = "small--text">© 2020 Flux</p>

@@ -5,7 +5,9 @@ export default Styled.div`
     div.row {
         display: flex;
         div.col {
-            width: 50%;
+            ${({theme}) => theme.minQuery("lg")} {
+                width: 50%;
+            }
             &:first-child {
                 padding-right: 10%;
                 h1  {
@@ -13,6 +15,10 @@ export default Styled.div`
                 }
             }
             &:last-child {  
+                display: none;
+                ${({theme}) => theme.minQuery("lg")} {
+                    display: block;
+                }
                 position: relative;
                  &:before {
                     content: "";

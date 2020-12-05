@@ -9,11 +9,11 @@ const AlreadyHaveBTC = () => {
     return (
         <Container>
                 <div>
-                    <h1>Already have BTC, USDT, <br /> ETH?</h1>
+                    <h1 className = "title">Already have BTC, USDT, <br /> ETH?</h1>
                     <p className = "large--body">No worries, we’ve got you.</p>
                 </div>
                 <div className = "row">
-                    <div className = "col">
+                    <div className = "col small--body">
                         <div>
                             <FiArrowDownLeft />
                         </div>
@@ -22,7 +22,7 @@ const AlreadyHaveBTC = () => {
                             <p>Deposit your Crypto and spend instantly using flux.</p>
                         </div>
                     </div>
-                    <div className = "col">
+                    <div className = "col  small--body">
                         <div>
                             <FiArrowUpRight />
                         </div>
@@ -31,7 +31,7 @@ const AlreadyHaveBTC = () => {
                             <p>Withdraw funds directly into your bank account.</p>
                         </div>
                     </div>
-                    <div className = "col">
+                    <div className = "col  small--body">
                         <div>
                             <HiCreditCard />
                         </div>

@@ -2,7 +2,6 @@ import Styled from "styled-components"
 
 
 export default Styled.div`
-    height: 100vh;
     background: #fff;
     padding-top: 16em;
      > div:first-child {
@@ -18,9 +17,16 @@ export default Styled.div`
         padding-top: 2em;
         flex-wrap: wrap;
         justify-content: space-between;
+        ${({theme}) => theme.maxQuery("md")} {
+            justify-content: center;
+        }
         .col {
             padding: 30px;
             padding-bottom: 10px;
+            margin-bottom: 1.2em;
+            ${({theme}) => theme.maxQuery("md")} {
+                margin-bottom: 2em;
+            }
             left: 105px;
             width: 319px;
             height: 404px;

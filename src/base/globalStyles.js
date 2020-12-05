@@ -13,8 +13,6 @@ export default createGlobalStyle`
         overflow-x: hidden;
         width: 100%;
         height: 100%;
-    }
-    html {
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         -moz-osx-font-smoothing: grayscale;
@@ -25,17 +23,20 @@ export default createGlobalStyle`
         }
     }
     body, html {
-      font-weight: normal;
+      font-family: ${({ theme }) => theme.fontFamily};
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 300;
+      ${({theme}) => theme.minQuery("md")} {
+          font-size: calc(18px * 1.5);
+          line-height: calc(28px * 1.5);
+      }
+      /* font-weight: normal; */
       position: relative;
       color: #222222;
-      font-family: ${({ theme }) => theme.fontFamily};
-      font-size: 16px; 
-      line-height: 26px;
-      ${({theme}) => theme.minQuery("md")} {
-            font-size: 18px;
-            line-height: 28px;
-      }
     }
+    
+    /* Typography */
     .headline {
         font-size: 60px;
         line-height: 56px;
@@ -48,15 +49,34 @@ export default createGlobalStyle`
     .title {
         font-size: 45px;
         line-height: 55px;
-        font-weight: 800;
+        font-weight: 800;    
+        ${({theme}) => theme.maxQuery("md")} {
+            font-size: 22px;
+            line-height: 28px;
+        } 
     }
     .large--body {
         font-size: 18px;
         line-height: 20px;
+        ${({theme}) => theme.minQuery("md")} {
+            font-size: calc(18px * 1.5);
+            line-height: calc(20px * 1.5);
+        }
     }
     .small--body {
         font-size: 16px;
         line-height: 28px;
+        /* ${({theme}) => theme.maxQuery("md")} {
+            font-size: calc(16 * 2);
+            line-height: calc(16 * 2);
+        } */
+
+        ${({theme}) => theme.minQuery("md")} {
+            font-size: calc(16px * 1.2);
+            line-height: calc(28px * 1.2);
+
+        }
+
     }
     .semi-header {
         font-size: 14px;

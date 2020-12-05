@@ -8,9 +8,7 @@ const Navigation = () => {
     return (
         <Container>
             <div className = "nav--desktop">
-                <div className = "brandImage">
-                    <img src = {fluxLogo} alt = "Flux logo" />
-                </div>
+                <img src = {fluxLogo} alt = "Flux logo" />
                 <ol>
                     <li>About Us</li>
                     <li>Flux Gift</li>
@@ -21,9 +19,7 @@ const Navigation = () => {
                 </ol>
             </div>
             <div className = "nav--mobile">
-                <div className = "brandImage">
-                    <img src = {fluxLogo} alt = "Flux logo" />
-                </div>
+                <img src = {fluxLogo} alt = "Flux logo" />
                 <MdMenu />
             </div>
         </Container>
