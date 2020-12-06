@@ -7,6 +7,7 @@ import glade from "../../../assets/glade.png"
 import wallet from "../../../assets/Dashboard (Wallet) – Crypto – Receive.png"
 import Bitcoin from "../../../assets/Receive Bitcoin.png";
 import {BiRightArrowAlt} from "react-icons/bi"
+import {FiArrowDownLeft} from "react-icons/fi"
 
 const ReceiveMoney = () => {
     return (
@@ -19,15 +20,22 @@ const ReceiveMoney = () => {
             </div>
             <div className = "row">
                 <div className = "col">
-                    <img src = {wallet} alt = {"flux wallet"} />
-                    <img src = {Bitcoin} alt = {"bitcoin wallet"} />
+                    <div>
+                        <img src = {wallet} alt = {"flux wallet"} />
+                    </div>
+                    <div>
+                        <img src = {Bitcoin} alt = {"bitcoin wallet"} />
+                    </div>
+                    <div className = "dropDown--label">
+                        <FiArrowDownLeft />
+                    </div>
                 </div>
                 <div className = "col">
                     <h3 className = "semi-header">RECEIVING</h3>
                     <h1 className = "headline">Receive money from anywhere.</h1>
                     <p>With Flux you can instantly receive money from anywhere using Bitcoin or USDT. We have the best exchange rates for your cash, spend exactly what you receive.</p>
                     <a href = "/" className = "link--arrow">See how <BiRightArrowAlt /></a>
-                    </div>
+                </div>
             </div>
         </Container>
     );

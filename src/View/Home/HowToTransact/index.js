@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Container from "./styles"
 import coinBaseLogo from "../../../assets/NoPath - Copy (3).png"
 import coinBaseTxt from "../../../assets/NoPath - Copy (5).png"
@@ -11,18 +11,20 @@ import receiveBtn2 from "../../../assets/Receive Bitcoin-2.png"
 
 
 const HowToTransact = () => {
+    const [activeTab, setState] = useState("receiveMoney")
     return (
         <Container>
             <ol className = "tabs">
-                <li className = "semi-header active">HOW TO RECEIVE MONEY</li>
-                <li className = "semi-header">HOW TO SEND MONEY</li>
+                <li className = {`semi-header ${activeTab === "receiveMoney" ? "active" : ""}`} onClick = {() => setState("receiveMoney")}>HOW TO RECEIVE MONEY</li>
+                <li className = {`semi-header ${activeTab !== "receiveMoney" ? "active" : ""}`} onClick = {() => setState("sendMoney")}>HOW TO SEND MONEY</li>
             </ol>
             <div className = "content--header">
-                <p>You can receive money from Cashapp, Coinbase, or any other Crypto wallet.</p>
-                <div className = "img--container">
+                {activeTab === "receiveMoney" ? <p>You can receive money from Cashapp, Coinbase, or any other Crypto wallet.</p>
+                : <p>Send funds on flux in just three simple steps. It really is that easy.</p>}
+                {activeTab === "receiveMoney" && <div className = {`img--container`}>
                     <img src = {coinBaseLogo} alt = {"coin base"} />
                     <img src = {coinBaseTxt} alt = {"Coin base text"} />
-                </div>
+                </div>}
             </div>
             <div className = "row">
                 <div className = "col">

@@ -15,10 +15,14 @@ const ReceiveMoney = () => {
                     <a href = "/" className = "link--arrow">See how <BiRightArrowAlt /></a>
                 </div>
                 <div className = "col">
-                    <img src = {dashBoard} alt = "flux dashboard" />
-                    <img src = {fluxBitCoin} alt = "flux bitcoin" />
+                    <div>
+                        <img src = {dashBoard} alt = "flux dashboard" />
+                    </div>
+                    <div>
+                        <img src = {fluxBitCoin} alt = "flux bitcoin" />
+                    </div>
                 </div>
-                </div>
+            </div>
         </Container>
     );
 };

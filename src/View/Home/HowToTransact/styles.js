@@ -1,6 +1,7 @@
 import Styled from "styled-components"
 
 
+
 export default Styled.div`
     padding-top: 7em;
     ol.tabs {
@@ -12,6 +13,7 @@ export default Styled.div`
         width: fit-content;
         li {
             display: inline-block;
+            cursor: pointer;
             position: relative;
             padding: 0px 1em 1em;
             color: #D4D4D4;
@@ -37,8 +39,13 @@ export default Styled.div`
     }
     div.content--header {
         text-align: center;
+        ${({theme}) => theme.minQuery("lg")} {
+            p {
+                width: 80%;
+                margin: auto;
+            }
+        }
         .img--container {
-            margin-bottom: 2em;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -46,9 +53,13 @@ export default Styled.div`
                 margin-right: 2em;
             }
         }
+        .hide {
+            opacity: 0;
+        }
     }
     div.row {
         display: flex;
+        margin-top: 2em;
         justify-content: space-between;
         ${({theme}) => theme.maxQuery("md")} {
             flex-direction: column;
@@ -61,12 +72,16 @@ export default Styled.div`
                 margin-bottom: 3em;
             }
             ${({theme}) => theme.minQuery("md")} {
-                height: 780px;
+                height: 670px;
             }
             p {
                 margin: 0px;
             }
             img {
+                &:first-child {
+                    width: 240px;
+                    height: 388px;
+                }
                 ${({theme}) => theme.minQuery("md")} {
                     position: absolute;
                     margin: 0px;

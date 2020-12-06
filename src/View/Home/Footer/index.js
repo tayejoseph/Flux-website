@@ -8,7 +8,7 @@ const Footer = () => {
         <Container>
             <p className = "semi-header">YOUR CASH, YOUR CONTROL</p>
             <h1 className = "title">We provide you with the options you deserve. We are unmatched, we make you Champion of your money.</h1>
-            <div>
+            <div className = "btn--group">
                 <Button primary>Download Now</Button>
                 <Button secondary>Contact Us</Button>
             </div>

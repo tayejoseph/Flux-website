@@ -15,9 +15,25 @@ export default Styled.div`
         left: -100vw;
         z-index: -1;
     }
+    &:after {
+        content: "";
+        position: absolute;
+        top: -64px;
+        left: 85%;
+        width: 44px;
+        height: 114px;
+        border: 4px solid #855AAF;
+        border-radius: 22px;
+        opacity: 1;
+    }
     h1.title {
         ${({theme}) => theme.minQuery("md")} {
             width: 80%;
+        }
+    }
+    div.btn--group {
+        button:first-child {
+            margin-right: 0.5em;
         }
     }
     ol.nav {

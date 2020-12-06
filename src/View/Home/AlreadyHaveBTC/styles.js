@@ -3,27 +3,38 @@ import Styled from "styled-components"
 
 export default Styled.div`
     background: #fff;
-    padding-top: 16em;
+    padding-top: 10em;
+    ${({theme}) => theme.minQuery("md")} {
+        padding-top: 12em;
+    }
      > div:first-child {
         text-align: center;
-    }
-    h1 {
-        font-weight: 800;
-        font-size: 45px;
-        line-height: 55px;
     }
     div.row {
         display: flex;
         padding-top: 2em;
+        position: relative;
         flex-wrap: wrap;
         justify-content: space-between;
         ${({theme}) => theme.maxQuery("md")} {
             justify-content: center;
         }
+        &:before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 1152px;
+            width: 44px;
+            height: 44px;
+            border: 4px solid #855AAF;
+            border-radius: 50%;
+            opacity: 1;
+        }
         .col {
             padding: 30px;
             padding-bottom: 10px;
             margin-bottom: 1.2em;
+            cursor: pointer;
             ${({theme}) => theme.maxQuery("md")} {
                 margin-bottom: 2em;
             }
@@ -38,6 +49,21 @@ export default Styled.div`
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: all ease-in-out 0.2s;
+            &:first-child {
+                /* position: relative; */
+                /* &:after {
+                    content: "";
+                    position: absolute;
+                    top: 45%;
+                    left: 300px;
+                    z-index: -1;
+                    width: 44px;
+                    height: 44px;
+                    border: 4px solid #855AAF;
+                    opacity: 1;
+                } */
+            }
             > div:first-child {
                 width: 44px;
                 height: 44px;
@@ -51,6 +77,9 @@ export default Styled.div`
                     font-weight: bold;
                     font-size: 1.5em;
                 }
+            }
+            &:hover {
+                transform: translateY(-20px);
             }
         }
         .col:nth-child(2) {

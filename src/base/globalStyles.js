@@ -31,11 +31,10 @@ export default createGlobalStyle`
           font-size: calc(18px * 1.5);
           line-height: calc(28px * 1.5);
       }
-      /* font-weight: normal; */
       position: relative;
       color: #222222;
     }
-    
+
     /* Typography */
     .headline {
         font-size: 60px;
@@ -98,12 +97,14 @@ export default createGlobalStyle`
     a.link--arrow {
         display: flex;
         align-items: center;
-        font-size: 14px;
+        font-weight: bold;
+        font-size: 16px;
         line-height: 28px;
         width: fit-content;
         text-decoration: none;
         .icon {
-            margin-left: 0.5em;
+            margin-left: 0.1em;
+            font-size: 1.8em;
         }
     }
 `

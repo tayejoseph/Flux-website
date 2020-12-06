@@ -13,7 +13,6 @@ export default Styled.nav`
             img {
                 width: 32px;
                 height: 32px;
-                margin: 0px;
             }
             &:before {
                 content: "";

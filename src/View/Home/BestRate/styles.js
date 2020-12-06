@@ -13,6 +13,43 @@ export default Styled.div`
         }
         margin: 0 auto;
     }
+    .img--container__desktop {
+        display: none;
+    }
+    ${({theme}) => theme.minQuery("md")} {
+        .img--container__mobile {
+            display: none;
+        }
+        .img--container__desktop {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 140px;
+                width: 44px;
+                z-index: 1;
+                height: 95px;
+                border: 4px solid var(--unnamed-color-ffffff);
+                border: 4px solid #FFFFFF;
+                border-radius: 22px;
+                opacity: 1;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 5px;
+                right: 150px;
+                width: 44px;
+                height: 44px;
+                border: 4px solid var(--unnamed-color-ffffff);
+                border: 4px solid #FFFFFF;
+                opacity: 1;
+            }
+        }
+    }
     &:before {
         content: "";
         height: 100%;
