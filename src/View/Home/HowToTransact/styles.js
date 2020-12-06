@@ -17,7 +17,7 @@ export default Styled.div`
             position: relative;
             padding: 0px 1em 1em;
             color: #D4D4D4;
-            ${({theme}) => theme.maxQuery("md")} {
+            ${({theme}) => theme.maxQuery("1050px")} {
                 width: 40%;
                 padding: 0px 0.5em 1em;
 
@@ -61,28 +61,61 @@ export default Styled.div`
         display: flex;
         margin-top: 2em;
         justify-content: space-between;
-        ${({theme}) => theme.maxQuery("md")} {
+        ${({theme}) => theme.maxQuery("1050px")} {
             flex-direction: column;
         }
         .col {
             position: relative;
             width: 25%;
-            ${({theme}) => theme.maxQuery("md")} {
+            ${({theme}) => theme.maxQuery("1050px")} {
                 width: 100%;
                 margin-bottom: 3em;
             }
-            ${({theme}) => theme.minQuery("md")} {
+            ${({theme}) => theme.minQuery("1050px")} {
                 height: 670px;
             }
             p {
                 margin: 0px;
+            }
+            div {
+                :after {
+                    content: "";
+                    position: absolute;
+                    border-radius: 50%;
+                    top: 30%;
+                    left: 10%;
+                    ${({theme}) => theme.minQuery("1050px")} {
+                        top: 35%;
+                        left: 25%;
+                    }
+                    z-index: -1;
+                    width: 215px;
+                    height: 215px;
+                    background: transparent linear-gradient(207deg, #F9F6FB 0%, #F2DFFF 100%) 0% 0% no-repeat padding-box;
+                    opacity: 1;
+                }
+                :before { 
+                    content: "";
+                    position: absolute;
+                    top: 38%;
+                    left: 15%;
+                    ${({theme}) => theme.minQuery("1050px")} {
+                        left: 25%;
+                    }
+                    z-index: -1;
+                    border-radius: 50%;
+                    width: 214px;
+                    height: 215px;
+                    background: transparent linear-gradient(333deg, #F9F6FB 0%, #F2DFFF 100%) 0% 0% no-repeat padding-box;
+                    opacity: 1;
+                }
             }
             img {
                 &:first-child {
                     width: 240px;
                     height: 388px;
                 }
-                ${({theme}) => theme.minQuery("md")} {
+                ${({theme}) => theme.minQuery("1050px")} {
                     position: absolute;
                     margin: 0px;
                     left: -20px;
@@ -91,9 +124,9 @@ export default Styled.div`
             }
             img:nth-child(2) {
                 position: absolute;
-                left: 20%;
-                top: 310px;
-                ${({theme}) => theme.minQuery("md")} {
+                left: 10%;
+                top: 60%;
+                ${({theme}) => theme.minQuery("1050px")} {
                     top: 310px;
                     left: 50px;
                 }

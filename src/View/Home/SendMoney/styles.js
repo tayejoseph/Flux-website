@@ -16,9 +16,25 @@ export default Styled.div`
                 width: 50%;
             }
             &:first-child {
+                position: relative;
                 padding-right: 10%;
                 h1  {
                     margin: 0px;
+                }
+                &:after {
+                    position: relative;
+                    content: "Send";
+                    position: absolute;
+                    bottom: -40%;
+                    left: 40%;
+                    width: 329px;
+                    z-index: -1;
+                    height: 159px;
+                    font-size: 132px;
+                    font-weight: 800;
+                    letter-spacing: 0px;
+                    color: #F9F6FB;
+                    opacity: 1;
                 }
             }
             &:last-child { 

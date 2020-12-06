@@ -16,7 +16,7 @@ export default Styled.div`
     .img--container__desktop {
         display: none;
     }
-    ${({theme}) => theme.minQuery("md")} {
+    ${({theme}) => theme.minQuery("1050px")} {
         .img--container__mobile {
             display: none;
         }

@@ -18,8 +18,12 @@ const HeaderBanner = () => {
                     </div>
                 </div>
                 <div className = "col">
-                    <img className = "lg-wallet" src = {lgScreen} alt = {"flux desktop wallet dashboard"} />
-                    <img className = "sm-wallet" src = {walletDashboard} alt = {"flux  mobile wallet dashboard"} />
+                    <div className = "lg-wallet">
+                        <img src = {lgScreen} alt = {"flux desktop wallet dashboard"} />
+                    </div>
+                    <div className = "sm-wallet">
+                        <img src = {walletDashboard} alt = {"flux  mobile wallet dashboard"} />
+                    </div>
                 </div>
             </div>
             <hr />

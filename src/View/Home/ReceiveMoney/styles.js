@@ -9,16 +9,17 @@ export default Styled.div`
         justify-content: space-between;
         padding: 3em 0px;
         padding-top: 1em;
-        &:after {
-            content: "";
-            position: absolute;
-            z-index: 1;
-            top: 230px;
-            /* left: 328px; */
-            width: 44px;
-            height: 44px;
-            border: 4px solid #855AAF;
-            opacity: 1;
+        ${({theme}) => theme.minQuery("md")} {
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                top: 230px;
+                width: 44px;
+                height: 44px;
+                border: 4px solid #855AAF;
+                opacity: 1;
+            }
         }
         ${({theme}) => theme.maxQuery("md")} {
             position: relative;
@@ -39,16 +40,16 @@ export default Styled.div`
     div.row {
         align-items: center;
         display: flex;
-        ${({theme}) => theme.minQuery("lg")} {
+        ${({theme}) => theme.minQuery("1050px")} {
             height: 90vh;
         }
         div.col {
-            ${({theme}) => theme.minQuery("lg")} {
+            ${({theme}) => theme.minQuery("1050px")} {
                 width: 50%;
             }
             &:first-child {
                 display: none;
-                ${({theme}) => theme.minQuery("lg")} {
+                ${({theme}) => theme.minQuery("1050px")} {
                     display: block;
                 }
                 &:before {
@@ -102,7 +103,7 @@ export default Styled.div`
                 }
                 .dropDown--label {
                     display: none;
-                    ${({theme}) => theme.minQuery("lg")} {
+                    ${({theme}) => theme.minQuery("1050px")} {
                         display: block;
                         position: absolute;
                         z-index: 4;
@@ -119,6 +120,25 @@ export default Styled.div`
                             font-size: 1.2em;
                         }
                     }
+                }
+            }
+            &:last-child {
+                position: relative;
+                &:after {
+                    content: "Receive";
+                    position: absolute;
+                    bottom: -18%;
+                    left: 300px;
+                    z-index: -1;
+                    width: 511px;
+                    height: 159px;
+                    text-align: left;
+                    font-size: 132px;
+                    font-weight: 800;
+                    /* font: normal normal 800 132px/123px; */
+                    letter-spacing: 0px;
+                    color: #F9F6FB;
+                    opacity: 1;
                 }
             }
         }
