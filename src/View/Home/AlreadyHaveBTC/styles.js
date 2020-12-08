@@ -50,20 +50,6 @@ export default Styled.div`
             flex-direction: column;
             justify-content: space-between;
             transition: all ease-in-out 0.2s;
-            &:first-child {
-                /* position: relative; */
-                /* &:after {
-                    content: "";
-                    position: absolute;
-                    top: 45%;
-                    left: 300px;
-                    z-index: -1;
-                    width: 44px;
-                    height: 44px;
-                    border: 4px solid #855AAF;
-                    opacity: 1;
-                } */
-            }
             > div:first-child {
                 width: 44px;
                 height: 44px;
@@ -80,6 +66,9 @@ export default Styled.div`
             }
             &:hover {
                 transform: translateY(-20px);
+                > div:first-child {
+                    border-radius: 50%;
+                }
             }
         }
         .col:nth-child(2) {
@@ -94,7 +83,7 @@ export default Styled.div`
             background: #855AAF 0% 0% no-repeat padding-box;
             box-shadow: 0px 0px 15px #00000029;
             .icon {
-                color: #855AAF;
+                color: ${({theme}) => theme.primary};
                 font-weight: bold;
             }
         }

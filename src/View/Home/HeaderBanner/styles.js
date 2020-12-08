@@ -157,7 +157,7 @@ export default Styled.div`
     }
     hr {
         ${({theme}) => theme.maxQuery("md")} {
-            display: none;
+            /* display: none; */
         }
         background-color: #D4D4D4;
         width: 100%;  

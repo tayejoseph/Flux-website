@@ -82,7 +82,7 @@ export default createGlobalStyle`
         line-height: 28px;
         letter-spacing: 2.8px;
         font-weight: bold;
-        color: #855AAF;
+        color: ${({theme}) => theme.primary};
     }
     .small--text {
         font-size: 14px;
@@ -102,9 +102,29 @@ export default createGlobalStyle`
         line-height: 28px;
         width: fit-content;
         text-decoration: none;
+        user-select: none;
+        position: relative;
+        color: ${({theme}) => theme.primary};
         .icon {
+            color: ${({theme}) => theme.primary};
             margin-left: 0.1em;
-            font-size: 1.8em;
+            font-size: 1.2em;
+        }
+        &::after {
+            content: "";
+            height: 0.25em;
+            opacity: 0;
+            width: 0%;
+            bottom: -0.2em;
+            position: absolute;
+            background: ${({theme}) => theme.primary};
+            transition: all 0.2s;
+        }
+        &:hover {
+            &:after {
+                width: 50%;
+                opacity: 1;
+            }
         }
     }
 `

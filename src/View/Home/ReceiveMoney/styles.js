@@ -9,7 +9,7 @@ export default Styled.div`
         justify-content: space-between;
         padding: 3em 0px;
         padding-top: 1em;
-        ${({theme}) => theme.minQuery("md")} {
+        ${({theme}) => theme.minQuery("1050px")} {
             &:after {
                 content: "";
                 position: absolute;
@@ -21,19 +21,31 @@ export default Styled.div`
                 opacity: 1;
             }
         }
-        ${({theme}) => theme.maxQuery("md")} {
+        /* ${({theme}) => theme.maxQuery("md")} {
             position: relative;
             display: grid;
             margin: 3em 0px;
             grid-row-gap: 5em;
             justify-items: center;
             grid-template-columns: 1fr 1fr;
-        }
+        } */
         img {
             display: block;
             ${({theme}) => theme.maxQuery("md")} {
                 width: 124px;
                 height: 27px;
+            }
+        }
+        ${({theme}) => theme.maxQuery("md")} {
+            img {
+                width: 30.5%;
+                height: 20px;
+            }
+            img:nth-child(3) {
+                height: 15px;
+            }
+            img:last-child {
+                display: none;
             }
         }
     }

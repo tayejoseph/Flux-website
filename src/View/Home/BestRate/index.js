@@ -2,7 +2,7 @@ import React from 'react';
 import {BiRightArrowAlt} from "react-icons/bi"
 import Container from "./styles"
 import walletDashboard from "../../../assets/Dashboard (Wallet) Buy Bitcoin.png"
-import receiveBitCoin from "../../../assets/Receive Bitcoin.png"
+import receiveBitCoin from "../../../assets/Receive Bitcoin-1@2x.png"
 
 const BestRate = () => {
     return (

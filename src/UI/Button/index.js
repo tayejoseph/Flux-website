@@ -3,8 +3,8 @@ import Styled from "styled-components";
 
 
 export default Styled.button`
-    background: ${({primary}) => primary ? "#855AAF" : "transparent"};
-    color: ${({primary}) => primary ? "#fff" : "#855AAF"};
+    background: ${({theme, primary}) => primary ? theme.primary : "transparent"};
+    color: ${({theme, primary}) => primary ? "#fff" : theme.primary};
     padding: 14px 30px;
     border-radius: 5px;
     outline: none;
@@ -14,7 +14,7 @@ export default Styled.button`
     box-shadow: none;
     border: none;
     &:hover {
-        background: ${({primary}) => primary ? "#350068" : "#fff"};
+        background: ${({primary}) => primary ? "#350068" : "transparent"};
         color: "#fff";
     }
 `

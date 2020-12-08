@@ -17,10 +17,12 @@ export default Styled.div`
             position: relative;
             padding: 0px 1em 1em;
             color: #D4D4D4;
-            ${({theme}) => theme.maxQuery("1050px")} {
-                width: 40%;
-                padding: 0px 0.5em 1em;
-
+            white-space: nowrap;
+            
+            ${({theme}) => theme.maxQuery("sm")} {
+                font-size: 0.5em;
+                width: 50%;
+                padding: 0 1.5em;
             }
         }
         li.active {
@@ -78,12 +80,18 @@ export default Styled.div`
                 margin: 0px;
             }
             div {
+                ${({theme}) => theme.maxQuery("md")} {
+                    padding-left: 10%;
+                }
                 :after {
                     content: "";
                     position: absolute;
                     border-radius: 50%;
                     top: 30%;
                     left: 10%;
+                    ${({theme}) => theme.maxQuery("md")} {
+                        left: 20%;
+                    }
                     ${({theme}) => theme.minQuery("1050px")} {
                         top: 35%;
                         left: 25%;
@@ -99,6 +107,9 @@ export default Styled.div`
                     position: absolute;
                     top: 38%;
                     left: 15%;
+                    ${({theme}) => theme.maxQuery("md")} {
+                        left: 25%;
+                    }
                     ${({theme}) => theme.minQuery("1050px")} {
                         left: 25%;
                     }
@@ -126,6 +137,9 @@ export default Styled.div`
                 position: absolute;
                 left: 10%;
                 top: 60%;
+                ${({theme}) => theme.maxQuery("md")} {
+                    left: 20%;
+                }
                 ${({theme}) => theme.minQuery("1050px")} {
                     top: 310px;
                     left: 50px;

@@ -11,6 +11,7 @@ const handleGetBreakPoint = (breakPoint) => {
 
 export const theme = () => ({
     navHeight: "87.5px",
+    primary: "#855AAF",
     minQuery: breakpoint => `@media(min-width: ${handleGetBreakPoint(breakpoint)})`,
     maxQuery: breakpoint => `@media(max-width: ${handleGetBreakPoint(breakpoint)})`, 
     minMaxQuery: (min, max) => `@media(max-width: ${handleGetBreakPoint(max)}) and (min-width: ${handleGetBreakPoint(min)})`,  

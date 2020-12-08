@@ -14,9 +14,9 @@ const HowToTransact = () => {
     const [activeTab, setState] = useState("receiveMoney")
     return (
         <Container>
-            <ol className = "tabs">
-                <li className = {`semi-header ${activeTab === "receiveMoney" ? "active" : ""}`} onClick = {() => setState("receiveMoney")}>HOW TO RECEIVE MONEY</li>
-                <li className = {`semi-header ${activeTab !== "receiveMoney" ? "active" : ""}`} onClick = {() => setState("sendMoney")}>HOW TO SEND MONEY</li>
+            <ol className = "tabs" role = "tablist" aria-label = "How to transact">
+                <li className = {`semi-header ${activeTab === "receiveMoney" ? "active" : ""}`} role = "tab" aria-selected={activeTab === "receiveMoney" ? "true" : "false"} tabIndex = "0" onClick = {() => setState("receiveMoney")}>HOW TO RECEIVE MONEY</li>
+                <li className = {`semi-header ${activeTab !== "receiveMoney" ? "active" : ""}`} role = "tab" aria-selected={activeTab !== "receiveMoney" ? "true" : "false"} tabIndex = "1" onClick = {() => setState("sendMoney")}>HOW TO SEND MONEY</li>
             </ol>
             <div className = "content--header">
                 {activeTab === "receiveMoney" ? <p>You can receive money from Cashapp, Coinbase, or any other Crypto wallet.</p>

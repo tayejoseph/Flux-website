@@ -18,12 +18,17 @@ export default Styled.div`
     &:after {
         content: "";
         position: absolute;
-        top: -64px;
-        left: 85%;
+        top: -7%;
+        left: 90%;
         width: 44px;
         height: 114px;
         border: 4px solid #855AAF;
         border-radius: 22px;
+        ${({theme}) => theme.maxQuery("md")} {
+            width: 22px;
+            top: -4%;
+            height: 57px;
+        }
         opacity: 1;
     }
     h1.title {
