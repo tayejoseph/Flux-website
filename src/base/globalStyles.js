@@ -1,5 +1,5 @@
-import {createGlobalStyle} from "styled-components"
-import {normalize} from "polished"
+import { createGlobalStyle } from "styled-components";
+import { normalize } from "polished";
 
 export default createGlobalStyle`
     ${normalize()};
@@ -27,7 +27,7 @@ export default createGlobalStyle`
       font-size: 18px;
       line-height: 28px;
       font-weight: 300;
-      ${({theme}) => theme.minQuery("md")} {
+      ${({ theme }) => theme.minQuery("md")} {
           font-size: calc(18px * 1.5);
           line-height: calc(28px * 1.5);
       }
@@ -40,7 +40,7 @@ export default createGlobalStyle`
         font-size: 60px;
         line-height: 56px;
         font-weight: 800;
-        ${({theme}) => theme.maxQuery("md")} {
+        ${({ theme }) => theme.maxQuery("md")} {
             font-size: 32px;
             line-height: 35px;
         }
@@ -49,7 +49,7 @@ export default createGlobalStyle`
         font-size: 45px;
         line-height: 55px;
         font-weight: 800;    
-        ${({theme}) => theme.maxQuery("md")} {
+        ${({ theme }) => theme.maxQuery("md")} {
             font-size: 22px;
             line-height: 28px;
         } 
@@ -57,7 +57,7 @@ export default createGlobalStyle`
     .large--body {
         font-size: 18px;
         line-height: 20px;
-        ${({theme}) => theme.minQuery("md")} {
+        ${({ theme }) => theme.minQuery("md")} {
             font-size: calc(18px * 1.5);
             line-height: calc(20px * 1.5);
         }
@@ -65,12 +65,12 @@ export default createGlobalStyle`
     .small--body {
         font-size: 16px;
         line-height: 28px;
-        /* ${({theme}) => theme.maxQuery("md")} {
+        /* ${({ theme }) => theme.maxQuery("md")} {
             font-size: calc(16 * 2);
             line-height: calc(16 * 2);
         } */
 
-        ${({theme}) => theme.minQuery("md")} {
+        ${({ theme }) => theme.minQuery("md")} {
             font-size: calc(16px * 1.2);
             line-height: calc(28px * 1.2);
 
@@ -82,7 +82,7 @@ export default createGlobalStyle`
         line-height: 28px;
         letter-spacing: 2.8px;
         font-weight: bold;
-        color: ${({theme}) => theme.primary};
+        color: ${({ theme }) => theme.primary};
     }
     .small--text {
         font-size: 14px;
@@ -104,9 +104,9 @@ export default createGlobalStyle`
         text-decoration: none;
         user-select: none;
         position: relative;
-        color: ${({theme}) => theme.primary};
+        color: ${({ theme }) => theme.primary};
         .icon {
-            color: ${({theme}) => theme.primary};
+            color: ${({ theme }) => theme.primary};
             margin-left: 0.1em;
             font-size: 1.2em;
         }
@@ -117,7 +117,7 @@ export default createGlobalStyle`
             width: 0%;
             bottom: -0.2em;
             position: absolute;
-            background: ${({theme}) => theme.primary};
+            background: ${({ theme }) => theme.primary};
             transition: all 0.2s;
         }
         &:hover {
@@ -127,4 +127,4 @@ export default createGlobalStyle`
             }
         }
     }
-`
+`;

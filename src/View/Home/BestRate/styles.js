@@ -1,5 +1,4 @@
-import Styled from "styled-components"
-
+import Styled from "styled-components";
 
 export default Styled.div`
     text-align: center;
@@ -8,13 +7,13 @@ export default Styled.div`
     padding-top: 3em;
     height: 671px;
      > div {
-        ${({theme}) => theme.minQuery("lg")} {
+        ${({ theme }) => theme.minQuery("lg")} {
             width: 50%;
         }
         margin: 0 auto;
     }
     .link--arrow {
-        ${({theme}) => theme.maxQuery("md")} {
+        ${({ theme }) => theme.maxQuery("md")} {
             display: none;
         }
         color: #fff;
@@ -55,7 +54,7 @@ export default Styled.div`
             opacity: 1;
         }
     }
-    ${({theme}) => theme.minQuery("1050px")} {
+    ${({ theme }) => theme.minQuery("1050px")} {
         .img--container__mobile {
             display: none;
         }
@@ -110,4 +109,4 @@ export default Styled.div`
         line-height: 28px;
     }
 
-`
+`;

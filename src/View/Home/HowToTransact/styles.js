@@ -1,6 +1,4 @@
-import Styled from "styled-components"
-
-
+import Styled from "styled-components";
 
 export default Styled.div`
     padding-top: 7em;
@@ -19,7 +17,7 @@ export default Styled.div`
             color: #D4D4D4;
             white-space: nowrap;
             
-            ${({theme}) => theme.maxQuery("sm")} {
+            ${({ theme }) => theme.maxQuery("sm")} {
                 font-size: 0.5em;
                 width: 50%;
                 padding: 0 1.5em;
@@ -41,7 +39,7 @@ export default Styled.div`
     }
     div.content--header {
         text-align: center;
-        ${({theme}) => theme.minQuery("lg")} {
+        ${({ theme }) => theme.minQuery("lg")} {
             p {
                 width: 80%;
                 margin: auto;
@@ -63,24 +61,24 @@ export default Styled.div`
         display: flex;
         margin-top: 2em;
         justify-content: space-between;
-        ${({theme}) => theme.maxQuery("1050px")} {
+        ${({ theme }) => theme.maxQuery("1050px")} {
             flex-direction: column;
         }
         .col {
             position: relative;
             width: 25%;
-            ${({theme}) => theme.maxQuery("1050px")} {
+            ${({ theme }) => theme.maxQuery("1050px")} {
                 width: 100%;
                 margin-bottom: 3em;
             }
-            ${({theme}) => theme.minQuery("1050px")} {
+            ${({ theme }) => theme.minQuery("1050px")} {
                 height: 670px;
             }
             p {
                 margin: 0px;
             }
             div {
-                ${({theme}) => theme.maxQuery("md")} {
+                ${({ theme }) => theme.maxQuery("md")} {
                     padding-left: 10%;
                 }
                 :after {
@@ -89,10 +87,10 @@ export default Styled.div`
                     border-radius: 50%;
                     top: 30%;
                     left: 10%;
-                    ${({theme}) => theme.maxQuery("md")} {
+                    ${({ theme }) => theme.maxQuery("md")} {
                         left: 20%;
                     }
-                    ${({theme}) => theme.minQuery("1050px")} {
+                    ${({ theme }) => theme.minQuery("1050px")} {
                         top: 35%;
                         left: 25%;
                     }
@@ -107,10 +105,10 @@ export default Styled.div`
                     position: absolute;
                     top: 38%;
                     left: 15%;
-                    ${({theme}) => theme.maxQuery("md")} {
+                    ${({ theme }) => theme.maxQuery("md")} {
                         left: 25%;
                     }
-                    ${({theme}) => theme.minQuery("1050px")} {
+                    ${({ theme }) => theme.minQuery("1050px")} {
                         left: 25%;
                     }
                     z-index: -1;
@@ -126,7 +124,7 @@ export default Styled.div`
                     width: 240px;
                     height: 388px;
                 }
-                ${({theme}) => theme.minQuery("1050px")} {
+                ${({ theme }) => theme.minQuery("1050px")} {
                     position: absolute;
                     margin: 0px;
                     left: -20px;
@@ -137,10 +135,10 @@ export default Styled.div`
                 position: absolute;
                 left: 10%;
                 top: 60%;
-                ${({theme}) => theme.maxQuery("md")} {
+                ${({ theme }) => theme.maxQuery("md")} {
                     left: 20%;
                 }
-                ${({theme}) => theme.minQuery("1050px")} {
+                ${({ theme }) => theme.minQuery("1050px")} {
                     top: 310px;
                     left: 50px;
                 }
@@ -148,4 +146,4 @@ export default Styled.div`
         }
     }
 
-`
+`;

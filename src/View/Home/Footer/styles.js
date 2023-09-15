@@ -1,6 +1,5 @@
 import Styled from "styled-components";
 
-
 export default Styled.div`
     position: relative;
     padding: 3em 0px 2em;
@@ -24,7 +23,7 @@ export default Styled.div`
         height: 114px;
         border: 4px solid #855AAF;
         border-radius: 22px;
-        ${({theme}) => theme.maxQuery("md")} {
+        ${({ theme }) => theme.maxQuery("md")} {
             width: 22px;
             top: -4%;
             height: 57px;
@@ -32,7 +31,7 @@ export default Styled.div`
         opacity: 1;
     }
     h1.title {
-        ${({theme}) => theme.minQuery("md")} {
+        ${({ theme }) => theme.minQuery("md")} {
             width: 80%;
         }
     }
@@ -49,12 +48,12 @@ export default Styled.div`
         border-bottom: 2px solid #222222;
         li {
             display: inline-block;
-            ${({theme}) => theme.maxQuery("md")} {
+            ${({ theme }) => theme.maxQuery("md")} {
                 display: block;
                 margin-bottom: 2em;
                 font-weight: bold;
             }
-            ${({theme}) => theme.minQuery("md")} {
+            ${({ theme }) => theme.minQuery("md")} {
                 &:not(:last-child) {
                     margin-right: 3em;
                 }
@@ -67,6 +66,4 @@ export default Styled.div`
         justify-content: space-between;
     }
 
-`
-
-
+`;

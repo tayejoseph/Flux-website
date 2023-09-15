@@ -1,8 +1,8 @@
-import Styled from "styled-components"
+import Styled from "styled-components";
 
 export default Styled.nav`
     position: relative;
-    ${({theme}) => theme.minQuery("1050px")} {
+    ${({ theme }) => theme.minQuery("1050px")} {
         .menu--mobile {
             display: none;
         }
@@ -76,7 +76,7 @@ export default Styled.nav`
                 left: -100vw;
                 z-index: -1;
             }
-        ${({theme}) => theme.minQuery("1050px")} {
+        ${({ theme }) => theme.minQuery("1050px")} {
             display: none;
         }
     }
@@ -88,7 +88,7 @@ export default Styled.nav`
         z-index: 999;
         position: relative;
         justify-content: space-between;
-        ${({theme}) => theme.maxQuery("1050px")} {
+        ${({ theme }) => theme.maxQuery("1050px")} {
             display: none;
         }
         ol {
@@ -105,4 +105,4 @@ export default Styled.nav`
         }   
     } 
 
-`
+`;
