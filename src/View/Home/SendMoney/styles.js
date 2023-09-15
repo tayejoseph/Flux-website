@@ -1,18 +1,18 @@
-import Styled from "styled-components"
+import Styled from "styled-components";
 
 export default Styled.div`
-    ${({theme}) => theme.minQuery("lg")} {
+    ${({ theme }) => theme.minQuery("lg")} {
         height: 80vh;
     }
     
     div.row {
         display: flex;
         margin: 5em 0px;
-        ${({theme}) => theme.minQuery("lg")} {
+        ${({ theme }) => theme.minQuery("lg")} {
         margin-top: 20vh;
         }
         div.col {
-            ${({theme}) => theme.minQuery("lg")} {
+            ${({ theme }) => theme.minQuery("lg")} {
                 width: 50%;
             }
             &:first-child {
@@ -43,7 +43,7 @@ export default Styled.div`
                     padding: 0px;
                 } 
                 display: none;
-                ${({theme}) => theme.minQuery("lg")} {
+                ${({ theme }) => theme.minQuery("lg")} {
                     display: block;
                 }
                 position: relative;
@@ -105,4 +105,4 @@ export default Styled.div`
         }
     }
 
-`
+`;

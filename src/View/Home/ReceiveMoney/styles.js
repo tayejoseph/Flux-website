@@ -1,4 +1,4 @@
-import Styled from "styled-components"
+import Styled from "styled-components";
 
 export default Styled.div`
     position: relative;
@@ -9,7 +9,7 @@ export default Styled.div`
         justify-content: space-between;
         padding: 3em 0px;
         padding-top: 1em;
-        ${({theme}) => theme.minQuery("1050px")} {
+        ${({ theme }) => theme.minQuery("1050px")} {
             &:after {
                 content: "";
                 position: absolute;
@@ -21,7 +21,7 @@ export default Styled.div`
                 opacity: 1;
             }
         }
-        /* ${({theme}) => theme.maxQuery("md")} {
+        /* ${({ theme }) => theme.maxQuery("md")} {
             position: relative;
             display: grid;
             margin: 3em 0px;
@@ -31,12 +31,12 @@ export default Styled.div`
         } */
         img {
             display: block;
-            ${({theme}) => theme.maxQuery("md")} {
+            ${({ theme }) => theme.maxQuery("md")} {
                 width: 124px;
                 height: 27px;
             }
         }
-        ${({theme}) => theme.maxQuery("md")} {
+        ${({ theme }) => theme.maxQuery("md")} {
             img {
                 width: 30.5%;
                 height: 20px;
@@ -52,16 +52,16 @@ export default Styled.div`
     div.row {
         align-items: center;
         display: flex;
-        ${({theme}) => theme.minQuery("1050px")} {
+        ${({ theme }) => theme.minQuery("1050px")} {
             height: 90vh;
         }
         div.col {
-            ${({theme}) => theme.minQuery("1050px")} {
+            ${({ theme }) => theme.minQuery("1050px")} {
                 width: 50%;
             }
             &:first-child {
                 display: none;
-                ${({theme}) => theme.minQuery("1050px")} {
+                ${({ theme }) => theme.minQuery("1050px")} {
                     display: block;
                 }
                 &:before {
@@ -115,7 +115,7 @@ export default Styled.div`
                 }
                 .dropDown--label {
                     display: none;
-                    ${({theme}) => theme.minQuery("1050px")} {
+                    ${({ theme }) => theme.minQuery("1050px")} {
                         display: block;
                         position: absolute;
                         z-index: 4;
@@ -156,4 +156,4 @@ export default Styled.div`
         }
     }
 
-`
+`;

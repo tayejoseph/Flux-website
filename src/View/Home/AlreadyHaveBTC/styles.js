@@ -1,10 +1,9 @@
-import Styled from "styled-components"
-
+import Styled from "styled-components";
 
 export default Styled.div`
     background: #fff;
     padding-top: 10em;
-    ${({theme}) => theme.minQuery("md")} {
+    ${({ theme }) => theme.minQuery("md")} {
         padding-top: 12em;
     }
      > div:first-child {
@@ -16,7 +15,7 @@ export default Styled.div`
         position: relative;
         flex-wrap: wrap;
         justify-content: space-between;
-        ${({theme}) => theme.maxQuery("md")} {
+        ${({ theme }) => theme.maxQuery("md")} {
             justify-content: center;
         }
         &:before {
@@ -35,7 +34,7 @@ export default Styled.div`
             padding-bottom: 10px;
             margin-bottom: 1.2em;
             cursor: pointer;
-            ${({theme}) => theme.maxQuery("md")} {
+            ${({ theme }) => theme.maxQuery("md")} {
                 margin-bottom: 2em;
             }
             left: 105px;
@@ -83,9 +82,9 @@ export default Styled.div`
             background: #855AAF 0% 0% no-repeat padding-box;
             box-shadow: 0px 0px 15px #00000029;
             .icon {
-                color: ${({theme}) => theme.primary};
+                color: ${({ theme }) => theme.primary};
                 font-weight: bold;
             }
         }
     }
-`
+`;

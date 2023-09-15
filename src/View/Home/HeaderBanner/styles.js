@@ -1,15 +1,14 @@
-import Styled from "styled-components"
-
+import Styled from "styled-components";
 
 export default Styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
     padding-top: 2.5em;
-    ${({theme}) => theme.maxQuery("md")} {
+    ${({ theme }) => theme.maxQuery("md")} {
         min-height: 60vh;
     }
-    ${({theme}) => theme.minQuery("md")} {
+    ${({ theme }) => theme.minQuery("md")} {
         display: flex;
         flex-direction: row;
         height: calc(100vh - 87.5px);   
@@ -17,13 +16,13 @@ export default Styled.div`
     div.col {
         &:first-child {
             width: 100%;
-            ${({theme}) => theme.minQuery("md")} {
+            ${({ theme }) => theme.minQuery("md")} {
                 width: 50%;
             }
-            ${({theme}) => theme.minMaxQuery("462px", "752px")} {
+            ${({ theme }) => theme.minMaxQuery("462px", "752px")} {
                 width: 70%;
             } 
-            ${({theme}) => theme.minQuery("md")} {
+            ${({ theme }) => theme.minQuery("md")} {
                 display: flex;
                 padding-bottom: 200px;
                 flex-direction: column;
@@ -33,7 +32,7 @@ export default Styled.div`
                 z-index: 1;
                 position: relative;
             }
-            ${({theme}) => theme.maxQuery("md")} {
+            ${({ theme }) => theme.maxQuery("md")} {
                 position: relative;
                 &:before {
                     content: "";
@@ -59,7 +58,7 @@ export default Styled.div`
                     background: transparent linear-gradient(27deg, #F9F6FB 0%, #F2DFFF 100%) 0% 0% no-repeat padding-box;
                 }
             }
-            ${({theme}) => theme.minMaxQuery("462px", "752px")} {
+            ${({ theme }) => theme.minMaxQuery("462px", "752px")} {
                 position: relative;
                 &:before {
                     content: "";
@@ -88,7 +87,7 @@ export default Styled.div`
             } 
             h1 {
                 margin-bottom: 0.5em;
-                ${({theme}) => theme.minQuery("md")} {
+                ${({ theme }) => theme.minQuery("md")} {
                     width: 628px;
                 }
             }
@@ -101,7 +100,7 @@ export default Styled.div`
         } 
         &:last-child {
             display: none;
-            ${({theme}) => theme.minQuery("lg")} {
+            ${({ theme }) => theme.minQuery("lg")} {
                 display: block;
             }
             &:before {
@@ -156,7 +155,7 @@ export default Styled.div`
         }  
     }
     hr {
-        ${({theme}) => theme.maxQuery("md")} {
+        ${({ theme }) => theme.maxQuery("md")} {
             /* display: none; */
         }
         background-color: #D4D4D4;
@@ -164,4 +163,4 @@ export default Styled.div`
         position: absolute;
         bottom: 0px;
     }
-`
+`;
